@@ -1,8 +1,10 @@
 import './App.css'
 import { Canvas } from "@react-three/fiber";
 import ThreeElement from "./ThreeElement.tsx";
+import {OrbitControls} from "@react-three/drei";
 
 function App() {
+
 
   return (
     <Canvas
@@ -12,8 +14,13 @@ function App() {
         fov:75,
         position:[3,3,0]
     }}>
+    <OrbitControls
 
-<ThreeElement/>
+
+    />
+        <axesHelper args={[6]}/>
+        <gridHelper args={[10,10]}/>
+        <ThreeElement/>
     </Canvas>
 
 

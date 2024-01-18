@@ -6,12 +6,6 @@ import {useRef} from "react";
 const ThreeElement = ()=>{
     const {size,gl,scene,camera} = useThree()
 const boxRef = useRef<THREE.Mesh>(null)
-
-    const geometry = new THREE.BoxGeometry(1,1,1)
-    const material = new THREE.MeshBasicMaterial({color:0x00ff00})
-    const cube = new THREE.Mesh(geometry,material)
-    scene.add(cube)
-
     useFrame((state,delta)=>{
             // boxRef.current.rotation.x += delta
         // boxRef.current.position.y += delta
